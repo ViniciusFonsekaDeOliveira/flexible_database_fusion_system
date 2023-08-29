@@ -1,4 +1,4 @@
-from databases.SqliteDatabase import SQLiteDatabase
+from databases.connection.SqliteDatabase import SQLiteDatabase
 
 
 class SQLite:

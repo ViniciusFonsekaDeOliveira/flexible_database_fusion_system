@@ -1,4 +1,4 @@
-from databases.PostgresDatabase import PostgresDatabase
+from databases.connection.PostgresDatabase import PostgresDatabase
 
 
 class Postgres:

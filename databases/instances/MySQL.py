@@ -1,4 +1,4 @@
-from databases.MysqlDatabase import MysqlDatabase
+from databases.connection.MysqlDatabase import MysqlDatabase
 
 
 class MySQL:

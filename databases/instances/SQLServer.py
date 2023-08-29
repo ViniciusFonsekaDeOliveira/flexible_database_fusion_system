@@ -1,4 +1,4 @@
-from databases.SQLServerDatabase import SQLServerDatabase
+from databases.connection.SQLServerDatabase import SQLServerDatabase
 
 
 class SQLServer:

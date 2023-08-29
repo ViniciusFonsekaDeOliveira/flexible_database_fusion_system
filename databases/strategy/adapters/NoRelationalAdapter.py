@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class NoSQLRepository:
+class NoRelationalAdapter(ABC):
     @abstractmethod
     def find(self, connection, collection_name, query):
         pass

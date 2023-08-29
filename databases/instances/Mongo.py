@@ -1,4 +1,4 @@
-from databases.MongoDatabase import MongoDatabase
+from databases.connection.MongoDatabase import MongoDatabase
 
 
 class Mongo:

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class RelationalRepository(ABC):
+class RelationalAdapter(ABC):
     @abstractmethod
     def findAll(self, connection, cursor, table: str, field: str = "*"):
         pass

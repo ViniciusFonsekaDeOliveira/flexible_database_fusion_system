@@ -36,11 +36,11 @@ class DatabaseConnection:
 
     @user.setter
     def user(self, user):
-        self._user
+        self._user = user
 
     @password.setter
     def password(self, password):
-        self._password
+        self._password = password
 
     @database_name.setter
     def database_name(self, database_name):
