@@ -13,4 +13,4 @@ class Mongo:
                 user=None,
                 password=None,
                 database_name="mydb")
-            return cls._instance
+        return cls._instance
