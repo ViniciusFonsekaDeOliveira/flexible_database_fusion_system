@@ -45,3 +45,7 @@ class DatabaseConnection:
     @database_name.setter
     def database_name(self, database_name):
         self._database_name = database_name
+
+    def connection(self):
+        raise NotImplementedError(
+            "Subclasses devem implementar o método connect!")
