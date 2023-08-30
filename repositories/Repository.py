@@ -8,7 +8,7 @@ class Repository(ABC):
         pass
 
     @abstractmethod
-    def find_by_id(self, *args):
+    def findOneByData(self, *args):
         pass
 
     @abstractmethod

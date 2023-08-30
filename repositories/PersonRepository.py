@@ -16,7 +16,7 @@ class PersonRepository(Repository):
     def findAll(self, *args):
         pass
 
-    def find_by_id(self, *args):
+    def findOneByData(self, *args):
         pass
 
     def insert(self, *args):
