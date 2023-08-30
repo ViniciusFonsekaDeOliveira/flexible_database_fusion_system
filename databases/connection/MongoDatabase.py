@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from urllib.parse import quote_plus
 from DatabaseConnection import DatabaseConnection
 
 
@@ -7,5 +8,8 @@ class MongoDatabase(DatabaseConnection):
         client = MongoClient(self.host)
         return client(self.database_name)
 
-    def get_connection_string(self):
-        return f"mongodb://{self.user}:{self.password}@{self.host}"
+    @property
+    def connection_string(self):
+        uri = "mongodb://%s:%s@%s" % (quote_plus(self.user),
+                                      quote_plus(self.password), self.host)
+        return uri
