@@ -12,5 +12,6 @@ class Mongo:
                 port=27017,
                 user=None,
                 password=None,
-                database_name="mydb")
+                database_name="mydb"
+            )
         return cls._instance
