@@ -3,7 +3,11 @@ from abc import ABC, abstractmethod
 
 class NoRelationalAdapter(ABC):
     @abstractmethod
-    def find(self, connection, collection_name, query):
+    def findAll(self, connection, collection_name):
+        pass
+
+    @abstractmethod
+    def findOneByData(self, connection, collection_name, query):
         pass
 
     @abstractmethod
