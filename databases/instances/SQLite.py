@@ -4,14 +4,8 @@ from databases.connection.SqliteDatabase import SQLiteDatabase
 class SQLite:
     _instance = None
 
-    def __new__(cls):
+    def __new__(cls, **kwargs):
         if cls._instance is None:
-            cls._instance = super(SQLite, cls).__new__(cls)
-            cls._instance.db_instance = SQLiteDatabase(
-                host=None,
-                port=None,
-                user=None,
-                password=None,
-                database_name="mySqlite_db.db"
-            )
+            cls._instance = super(SQLite, cls).__new__(cls, **kwargs)
+            cls._instance.db_instance = SQLiteDatabase(**kwargs)
         return cls._instance

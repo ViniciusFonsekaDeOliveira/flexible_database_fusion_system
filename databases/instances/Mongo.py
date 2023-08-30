@@ -4,14 +4,8 @@ from databases.connection.MongoDatabase import MongoDatabase
 class Mongo:
     _instance = None
 
-    def __new__(cls):
+    def __new__(cls, **kwargs):
         if cls._instance is None:
-            cls._instance = super(Mongo, cls).__new__(cls)
-            cls._instance.db_instance = MongoDatabase(
-                host="localhost",
-                port=27017,
-                user=None,
-                password=None,
-                database_name="mydb"
-            )
+            cls._instance = super(Mongo, cls).__new__(cls, **kwargs)
+            cls._instance.db_instance = MongoDatabase(**kwargs)
         return cls._instance
