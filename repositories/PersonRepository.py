@@ -1,4 +1,7 @@
-class PersonRepository:
+from Repository import Repository
+
+
+class PersonRepository(Repository):
     def __init__(self, database_strategy) -> None:
         self._strategy = database_strategy
 
@@ -10,14 +13,17 @@ class PersonRepository:
     def strategy(self, database_strategy):
         self._strategy = database_strategy
 
-    def find_person_by_id(self):
+    def findAll(self, *args):
         pass
 
-    def insert_person(self):
+    def find_by_id(self, *args):
         pass
 
-    def update_person(self):
+    def insert(self, *args):
         pass
 
-    def delete_person(self):
+    def update(self, *args):
+        pass
+
+    def delete(self, *args):
         pass
