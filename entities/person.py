@@ -50,3 +50,11 @@ class Person:
 
     def __hash__(self) -> int:
         return (hash(self.realname) ^ hash(self.username) ^ hash(self.email) ^ hash(self.profession))
+
+    def to_dict(self):
+        return {
+            "realname": self.realname,
+            "username": self.userName,
+            "email": self.email,
+            "profession": self.profession
+        }
