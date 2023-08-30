@@ -14,3 +14,4 @@ class SQLite:
                 password=None,
                 database_name="mySqlite_db.db"
             )
+        return cls._instance
