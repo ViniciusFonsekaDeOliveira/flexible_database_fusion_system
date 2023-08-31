@@ -8,4 +8,4 @@ class MySQL:
         if cls._instance is None:
             cls._instance = super(MySQL, cls).__new__(cls, **kwargs)
             cls._instance.db_instance = MysqlDatabase(**kwargs)
-        return cls._instace
+        return cls._instance
