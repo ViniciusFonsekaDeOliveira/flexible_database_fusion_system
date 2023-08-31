@@ -8,3 +8,18 @@ class MongoStrategy(NoRelationalAdapter):
     @property
     def mongodb(self):
         return self._mongodb
+
+    def findAll(self, connection, collection_name):
+        pass
+
+    def findOneByData(self, connection, collection_name, query):
+        pass
+
+    def insert(self, connection, collection_name, document):
+        pass
+
+    def update(self, connection, collection_name, query, updated_data):
+        pass
+
+    def delete(self, connection, collection_name, query):
+        pass

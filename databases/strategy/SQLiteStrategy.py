@@ -9,4 +9,17 @@ class SQLiteStrategy(RelationalAdapter):
     def sqlitedb(self):
         return self._sqlitedb
 
-    # TO DO: especific CRUD operations realted to sqlite database
+    def findAll(self, connection, cursor, table: str, field: str = "*"):
+        pass
+
+    def findOneByData(self, connection, cursor, table: str, dataToSearch: dict, fields: str = "*"):
+        pass
+
+    def insert(self, connection, cursor, table: str, dataToInsert: dict):
+        pass
+
+    def update(self, connection, cursor, table: str, dataIdentifier: dict, updatedData: dict):
+        pass
+
+    def delete(self, connection, cursor, table: str, dataIdentifier: dict):
+        pass

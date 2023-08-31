@@ -9,4 +9,17 @@ class SQLServerStrategy(RelationalAdapter):
     def sqlserver(self):
         return self._sqlserver
 
-   # TO DO: especific CRUD operations related to SQL Server database
+    def findAll(self, connection, cursor, table: str, field: str = "*"):
+        pass
+
+    def findOneByData(self, connection, cursor, table: str, dataToSearch: dict, fields: str = "*"):
+        pass
+
+    def insert(self, connection, cursor, table: str, dataToInsert: dict):
+        pass
+
+    def update(self, connection, cursor, table: str, dataIdentifier: dict, updatedData: dict):
+        pass
+
+    def delete(self, connection, cursor, table: str, dataIdentifier: dict):
+        pass

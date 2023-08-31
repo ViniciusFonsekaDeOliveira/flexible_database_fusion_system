@@ -9,4 +9,17 @@ class MySQLStrategy(RelationalAdapter):
     def mysqldb(self):
         return self._mysqldb
 
-    # TO DO: especific CRUD operations to mysql databases
+    def findAll(self, connection, cursor, table: str, field: str = "*"):
+        pass
+
+    def findOneByData(self, connection, cursor, table: str, dataToSearch: dict, fields: str = "*"):
+        pass
+
+    def insert(self, connection, cursor, table: str, dataToInsert: dict):
+        pass
+
+    def update(self, connection, cursor, table: str, dataIdentifier: dict, updatedData: dict):
+        pass
+
+    def delete(self, connection, cursor, table: str, dataIdentifier: dict):
+        pass
