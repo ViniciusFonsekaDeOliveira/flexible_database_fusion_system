@@ -5,8 +5,8 @@ from DatabaseConnection import DatabaseConnection
 
 class MongoDatabase(DatabaseConnection):
     def connect(self):
-        client = MongoClient(self.host)
-        return client(self.database_name)
+        client = MongoClient(self.host)  # "mongodb://localhost:27017/"
+        return client[self.database_name]
 
     @property
     def connection_string(self):

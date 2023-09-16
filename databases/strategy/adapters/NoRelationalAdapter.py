@@ -3,21 +3,21 @@ from abc import ABC, abstractmethod
 
 class NoRelationalAdapter(ABC):
     @abstractmethod
-    def findAll(self, connection, collection_name):
+    def findAll(self, collection_name, fields: dict = None):
         pass
 
     @abstractmethod
-    def findOneByData(self, connection, collection_name, query):
+    def findOneByData(self, collection_name: str, dataToSearch: dict, fields: dict = None):
         pass
 
     @abstractmethod
-    def insert(self, connection, collection_name, document):
+    def insert(self, collection_name: str, dataToInsert: dict):
         pass
 
     @abstractmethod
-    def update(self, connection, collection_name, query, updated_data):
+    def update(self, collection_name: str, dataIdentifier: dict, updatedData: dict):
         pass
 
     @abstractmethod
-    def delete(self, connection, collection_name, query):
+    def delete(self, collection_name: str, dataIdentifier: dict):
         pass

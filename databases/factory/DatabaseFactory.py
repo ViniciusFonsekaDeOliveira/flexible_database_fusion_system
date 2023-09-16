@@ -20,17 +20,3 @@ class DatabaseFactory:
             return Mongo(**kwargs)
         else:
             print("Invalid database option!")
-
-
-if __name__ == "__main__":
-
-    db_name = "mysql"
-    connection = {
-        "host": "test",
-        "port": "test",
-        "user": "test",
-        "password": "test",
-        "database": "test"
-    }
-
-    db = DatabaseFactory.create_database_connection(db_name, **connection)
